@@ -3,6 +3,7 @@ Tech Stack
 
 Charles Haynes
 charles.haynes@cogent.co
+https://github.com/charles-haynes/tech-stack
 
 * DVCS
 
@@ -21,14 +22,15 @@ charles.haynes@cogent.co
 - Build once, deploy often
 - Build, Unit Test, Deploy, Acceptance Test
 - Agents are docker containers, can be different technolgies
+- Auditability
 
 * Go
 
 Intended for writing at scale
 
-- big codebases
-- shared across huge teams
-- massive deployments
+- Big codebases
+- Shared across huge teams
+- Massive deployments
 
 * Go
 
@@ -58,17 +60,18 @@ CQRS Journey patterns and practices from microsoft
 .link https://msdn.microsoft.com/en-us/library/jj554200.aspx
 
 - RESTful interface in terms of business relevant events
-- Only POST and GET
 - Can't reject them
 - Remember them forever
 - Read model is a projection of the complete event stream
+- API versioning
+- Auditability
 
 * Flat files for persistent storage
 
 - Works with event sourcing
-- event log is just an append only file of json objects
-- short circuits endless arguments about databases
-- scales surprisingly well
+- Event log is an append only file of json objects
+- Short circuits endless arguments about databases
+- Scales surprisingly well
 - performant
 
 * Kubernetes
@@ -89,7 +92,7 @@ CQRS Journey patterns and practices from microsoft
 
 - REST
 - Domain Driven Design / Business Driven Design
-- Stateless services
+- Use stateless services
 - Docker (isolation, ports)
 - CI/CD
 - Scaling
@@ -100,10 +103,10 @@ CQRS Journey patterns and practices from microsoft
 - Kubernetes
 
 Provisioning is still a pain, especially for immutable infrastructure
-we use Bash scripts for provisioning
+Still using Bash scripts for provisioning
 
-** AWS
-** GCP
+- AWS
+- GCP
 
 * Service Discovery
 
