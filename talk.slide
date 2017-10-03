@@ -53,6 +53,7 @@ Intended for writing at scale
 - Interfaces not classes
 - Dependency management
 - Garbage collected
+- Easy to static link
 
 * Event Sourcing
 
@@ -63,7 +64,13 @@ CQRS Journey patterns and practices from microsoft
 - Can't reject them
 - Remember them forever
 - Read model is a projection of the complete event stream
+
+* Event Sourcing
+
+Issues and advantages
+
 - API versioning
+- Repair and replay
 - Auditability
 
 * Flat files for persistent storage
