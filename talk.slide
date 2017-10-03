@@ -1,0 +1,112 @@
+Tech Stack
+4 October 2017
+
+Charles Haynes
+charles.haynes@cogent.co
+
+* DVCS
+
+- Git
+- Docker Hub
+
+* Docker
+
+- Containers are apps.
+- Isolate dependencies (static linking!)
+- Export Via Ports
+
+* CI/CD
+
+- Immutable Infrastructure (cows not pets)
+- Build once, deploy often
+- Build, Unit Test, Deploy, Acceptance Test
+- Agents are docker containers, can be different technolgies
+
+* Go
+
+Intended for writing at scale
+
+- big codebases
+- shared across huge teams
+- massive deployments
+
+* Go
+
+    Go is an attempt to combine the ease of programming of an
+    interpreted, dynamically typed language with the efficiency and
+    safety of a statically typed, compiled language. It also aims to
+    be modern, with support for networked and multicore
+    computing. Finally, working with Go is intended to be fast: it
+    should take at most a few seconds to build a large executable on a
+    single computer. To meet these goals required addressing a number
+    of linguistic issues: an expressive but lightweight type system;
+    concurrency and garbage collection; rigid dependency
+    specification; and so on. These cannot be addressed well by
+    libraries or tools; a new language was called for.
+
+* Go
+
+- "Small" language, minimum number of orthogonal concepts
+- Lightweight static types
+- Interfaces not classes
+- Dependency management
+- Garbage collected
+
+* Event Sourcing
+
+CQRS Journey patterns and practices from microsoft
+.link https://msdn.microsoft.com/en-us/library/jj554200.aspx
+
+- RESTful interface in terms of business relevant events
+- Only POST and GET
+- Can't reject them
+- Remember them forever
+- Read model is a projection of the complete event stream
+
+* Flat files for persistent storage
+
+- Works with event sourcing
+- event log is just an append only file of json objects
+- short circuits endless arguments about databases
+- scales surprisingly well
+- performant
+
+* Kubernetes
+
+- Infrastructure deployment
+- Manages a cluster of hosts and the containers running on them
+- Does only part of provisioning
+
+* Kubernetes
+
+- Monitoring
+- Replication
+- Horizontal scaling
+- Load Balancing
+- Service Discovery
+
+* Microservices
+
+- REST
+- Domain Driven Design / Business Driven Design
+- Stateless services
+- Docker (isolation, ports)
+- CI/CD
+- Scaling
+
+* Cloud Provisioning
+
+- CI/CD
+- Kubernetes
+
+Provisioning is still a pain, especially for immutable infrastructure
+we use Bash scripts for provisioning
+
+** AWS
+** GCP
+
+* Service Discovery
+
+- Kubernetes
+- DNS
+- Inferred from deployment
